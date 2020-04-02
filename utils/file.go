@@ -97,5 +97,6 @@ func GrepFile(patten string, filename string) (lines []string, err error) {
 			lines = append(lines, line)
 		}
 	}
+	fd.Close()
 	return lines, nil
 }

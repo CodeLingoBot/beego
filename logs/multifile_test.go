@@ -72,6 +72,7 @@ func TestFiles_1(t *testing.T) {
 				t.Fatal(file + " " + lastLine + " not contains the log msg " + fn)
 			}
 		}
+		f.Close()
 		os.Remove(file)
 	}
 

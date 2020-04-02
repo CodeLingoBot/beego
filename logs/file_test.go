@@ -76,6 +76,7 @@ func TestFile1(t *testing.T) {
 	if lineNum != expected {
 		t.Fatal(lineNum, "not "+strconv.Itoa(expected)+" lines")
 	}
+	f.Close()
 	os.Remove("test.log")
 }
 
@@ -109,6 +110,7 @@ func TestFile2(t *testing.T) {
 	if lineNum != expected {
 		t.Fatal(lineNum, "not "+strconv.Itoa(expected)+" lines")
 	}
+	f.Close()
 	os.Remove("test2.log")
 }
 
